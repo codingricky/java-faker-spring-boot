@@ -20,6 +20,14 @@
         <h1 class="display-4">Java faker Spring boot example!</h1>
         <p class="lead">Shows how to use <a href="https://github.com/DiUS/java-faker/">java-faker</a>. Code is <a href="https://github.com/codingricky/java-faker-spring-boot">here</a></p>
     </div>
+    <div class="form-group">
+        <form method="GET">
+            <select name="locale" onchange="this.form.submit();">
+                <option th:each="locale : ${locales}" th:value="${locale}" th:text="${locale}">
+                </option>
+            </select>
+        </form>
+    </div>
     <div th:each="fakerObjects : ${values}" class="form-group">
         <form>
             <div th:each="fakerValue : ${fakerObjects.fields}" class="form-group">
