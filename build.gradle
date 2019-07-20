@@ -34,7 +34,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-devtools")
 
     implementation("org.webjars:bootstrap:4.1.0")
-    implementation("com.github.javafaker:javafaker")
+    implementation("com.github.javafaker:javafaker:0.18")
 
     testCompile("junit:junit")
 }
