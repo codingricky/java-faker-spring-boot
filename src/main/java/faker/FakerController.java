@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 @Controller
 public class FakerController {
-    @GetMapping("/index")
+    @GetMapping("/")
     public String index(Model model) {
         Faker faker = new Faker();
         List<FakerObject> fakerObjects = Arrays.asList(faker.name(),
