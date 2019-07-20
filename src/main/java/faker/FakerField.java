@@ -1,5 +1,7 @@
 package faker;
 
+import org.apache.commons.text.WordUtils;
+
 import java.io.Serializable;
 
 public class FakerField implements Serializable {

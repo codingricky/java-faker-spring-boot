@@ -4,19 +4,31 @@
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
     <link href="webjars/bootstrap/4.1.0/css/bootstrap.min.css"
           rel="stylesheet"/>
     <script src="webjars/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
+<style>
+    .page{
+        margin: 20px;
+    }
+
+</style>
 <body>
-<div class="container">
-    <form>
-        <div th:each="fakerValue : ${values}" class="form-group">
-            <label th:for="${fakerValue.label}" th:text="${fakerValue.label}"></label>
-            <input type="text" th:name="${fakerValue.label}" th:value="${fakerValue.value}"></input>
-        </div>
-    </form>
+<div class="page">
+    <div class="jumbotron">
+        <h1 class="display-4">Java faker Spring boot example!</h1>
+        <p class="lead">Shows how to use <a href="https://github.com/DiUS/java-faker/">java-faker</a>. Code is <a href="https://github.com/codingricky/java-faker-spring-boot">here</a></p>
+    </div>
+    <div th:each="fakerObjects : ${values}" class="form-group">
+        <form>
+            <div th:each="fakerValue : ${fakerObjects.fields}" class="form-group">
+                <label th:for="${fakerValue.label}" th:text="${fakerValue.label}"></label>
+                <input type="text" th:name="${fakerValue.label}" th:value="${fakerValue.value}"
+                       class="form-control"></input>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
