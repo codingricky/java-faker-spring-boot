@@ -12,7 +12,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-devtools:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Gradle: com.github.javafaker:javafaker:0.18" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.javafaker:javafaker:1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.commons:commons-text:1.7" level="project" />
     <orderEntry type="library" name="Gradle: org.webjars:bootstrap:4.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.1.6.RELEASE" level="project" />
