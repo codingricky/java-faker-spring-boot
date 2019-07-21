@@ -19,4 +19,12 @@ public class FakerObject implements Serializable {
     public List<FakerField> getFields() {
         return fields;
     }
+
+    @Override
+    public String toString() {
+        return "FakerObject{" +
+                "name='" + name + '\'' +
+                ", fields=" + fields +
+                '}';
+    }
 }

@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
+import static faker.FakerUtil.getFakerObjects;
+
 @Controller
 public class FakerController {
     @RequestMapping(value = "/", method = {RequestMethod.GET})
@@ -19,17 +21,7 @@ public class FakerController {
                 Locale.GERMANY.getCountry()));
 
         Faker faker = new Faker(new Locale(locale));
-        List<FakerObject> fakerObjects = Arrays.asList(faker.name(),
-                faker.address(),
-                faker.phoneNumber(),
-                faker.ancient(),
-                faker.app(),
-                faker.artist(),
-                faker.avatar(),
-                faker.chuckNorris(),
-                faker.harryPotter(),
-                faker.superhero()).stream().map(FakerController::convertTo).collect(Collectors.toList());
-        model.addAttribute("values", fakerObjects);
+        model.addAttribute("values", getFakerObjects(faker));
         return "faker.html";
     }
 

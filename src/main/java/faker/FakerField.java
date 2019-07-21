@@ -20,4 +20,12 @@ public class FakerField implements Serializable {
     public String getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return "FakerField{" +
+                "label='" + label + '\'' +
+                ", value='" + value + '\'' +
+                '}';
+    }
 }
